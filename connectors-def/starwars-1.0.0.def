@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition:ConnectorDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1">
+  <id>starwars</id>
+  <version>1.0.0</version>
+  <input mandatory="true" name="name" type="java.lang.String"/>
+  <input defaultValue="http://swapi.dev/" mandatory="true" name="url" type="java.lang.String"/>
+  <output name="person" type="java.lang.String"/>
+  <page id="starwarpage">
+    <widget xsi:type="definition:Text" id="nameWidget" inputName="name"/>
+    <widget xsi:type="definition:Text" id="urlWidget" inputName="url"/>
+  </page>
+</definition:ConnectorDefinition>
