@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<implementation:connectorImplementation xmlns:implementation="http://www.bonitasoft.org/ns/connector/implementation/6.0">
+  <implementationId>pdf2image-impl</implementationId>
+  <implementationVersion>1.0.0</implementationVersion>
+  <definitionId>pdf2image</definitionId>
+  <definitionVersion>1.0.0</definitionVersion>
+  <implementationClassname>org.bonitasoft.connector.pdf2image.Pdf2ImageImpl</implementationClassname>
+  <hasSources>true</hasSources>
+  <description>Transform one or multiple page of a PDF into Image (PNG, JPEG)</description>
+  <jarDependencies>
+    <jarDependency>pdfbox-2.0.22.jar</jarDependency>
+    <jarDependency>fontbox-2.0.22.jar</jarDependency>
+    <jarDependency>pdf2image-impl-1.0.0.jar</jarDependency>
+  </jarDependencies>
+</implementation:connectorImplementation>

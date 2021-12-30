@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition:ConnectorDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1">
+  <id>pdf2image</id>
+  <version>1.0.0</version>
+  <category icon="bonita.png" id="Bonitasoft"/>
+  <input mandatory="true" name="documentPdf" type="java.lang.String"/>
+  <input name="pageNumber" type="java.lang.Integer"/>
+  <input name="allPagesInOneImage" type="java.lang.Boolean"/>
+  <input name="allPagesInList" type="java.lang.Boolean"/>
+  <input name="formatImage" type="java.lang.String"/>
+  <output name="specificPageDocument" type="org.bonitasoft.engine.bpm.document.DocumentValue"/>
+  <output name="allPagesDocument" type="org.bonitasoft.engine.bpm.document.DocumentValue"/>
+  <output name="listOfPagesDocument" type="java.util.List"/>
+  <page id="inititialisation">
+    <widget xsi:type="definition:Text" id="documentPDF" inputName="documentPdf" showDocuments="true"/>
+    <widget xsi:type="definition:Text" id="pageNumber" inputName="pageNumber"/>
+    <widget xsi:type="definition:Checkbox" id="allPagesInOneImage" inputName="allPagesInOneImage"/>
+    <widget xsi:type="definition:Checkbox" id="allPagesInAList" inputName="allPagesInList"/>
+    <widget xsi:type="definition:Select" id="formatImage" inputName="formatImage">
+      <items>JPEG</items>
+      <items>PNG</items>
+    </widget>
+  </page>
+</definition:ConnectorDefinition>
