@@ -65,6 +65,46 @@
           </dynamicLabel>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_GcCYEWldEeyLZOr4w4rOnQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_GcC_IGldEeyLZOr4w4rOnQ" name="" content="" returnTypeFixed="true"/>
+          <connectors xmi:type="process:Connector" xmi:id="_uacWEG-YEeyVAaCajG5Q2w" name="ff" definitionId="pdf2image" event="ON_FINISH" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_uacWEW-YEeyVAaCajG5Q2w" definitionId="pdf2image" version="1.0.0" modelVersion="7.11.1-001">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_uacWEm-YEeyVAaCajG5Q2w" key="documentPdf">
+                <expression xmi:type="expression:Expression" xmi:id="_uacWE2-YEeyVAaCajG5Q2w" name="ff" content="ff" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_uacWFG-YEeyVAaCajG5Q2w" key="pageNumber">
+                <expression xmi:type="expression:Expression" xmi:id="_uacWFW-YEeyVAaCajG5Q2w" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_uacWFm-YEeyVAaCajG5Q2w" key="allPagesInOneImage">
+                <expression xmi:type="expression:Expression" xmi:id="_uacWF2-YEeyVAaCajG5Q2w" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_uacWGG-YEeyVAaCajG5Q2w" key="allPagesInList">
+                <expression xmi:type="expression:Expression" xmi:id="_uacWGW-YEeyVAaCajG5Q2w" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_uacWGm-YEeyVAaCajG5Q2w" key="formatImage">
+                <expression xmi:type="expression:Expression" xmi:id="_uacWG2-YEeyVAaCajG5Q2w" name="JPEG" content="JPEG" returnTypeFixed="true"/>
+              </parameters>
+            </configuration>
+            <outputs xmi:type="expression:Operation" xmi:id="_uacWHG-YEeyVAaCajG5Q2w">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_uacWHW-YEeyVAaCajG5Q2w"/>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_uacWHm-YEeyVAaCajG5Q2w" name="specificPageDocument" content="specificPageDocument" type="CONNECTOR_OUTPUT_TYPE" returnType="org.bonitasoft.engine.bpm.document.DocumentValue">
+                <referencedElements xmi:type="definition:Output" xmi:id="_uacWH2-YEeyVAaCajG5Q2w" name="specificPageDocument" type="org.bonitasoft.engine.bpm.document.DocumentValue"/>
+              </rightOperand>
+              <operator xmi:type="expression:Operator" xmi:id="_uacWIG-YEeyVAaCajG5Q2w" type="DOCUMENT_CREATE_UPDATE"/>
+            </outputs>
+            <outputs xmi:type="expression:Operation" xmi:id="_uacWIW-YEeyVAaCajG5Q2w">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_uacWIm-YEeyVAaCajG5Q2w"/>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_uacWI2-YEeyVAaCajG5Q2w" name="allPagesDocument" content="allPagesDocument" type="CONNECTOR_OUTPUT_TYPE" returnType="org.bonitasoft.engine.bpm.document.DocumentValue">
+                <referencedElements xmi:type="definition:Output" xmi:id="_uacWJG-YEeyVAaCajG5Q2w" name="allPagesDocument" type="org.bonitasoft.engine.bpm.document.DocumentValue"/>
+              </rightOperand>
+              <operator xmi:type="expression:Operator" xmi:id="_uacWJW-YEeyVAaCajG5Q2w" type="DOCUMENT_CREATE_UPDATE"/>
+            </outputs>
+            <outputs xmi:type="expression:Operation" xmi:id="_uacWJm-YEeyVAaCajG5Q2w">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_uacWJ2-YEeyVAaCajG5Q2w"/>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_uacWKG-YEeyVAaCajG5Q2w" name="listOfPagesDocument" content="listOfPagesDocument" type="CONNECTOR_OUTPUT_TYPE" returnType="java.util.List">
+                <referencedElements xmi:type="definition:Output" xmi:id="_uacWKW-YEeyVAaCajG5Q2w" name="listOfPagesDocument" type="java.util.List"/>
+              </rightOperand>
+              <operator xmi:type="expression:Operator" xmi:id="_uacWKm-YEeyVAaCajG5Q2w" type="ASSIGNMENT"/>
+            </outputs>
+          </connectors>
           <loopCondition xmi:type="expression:Expression" xmi:id="_GcC_IWldEeyLZOr4w4rOnQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_GcC_ImldEeyLZOr4w4rOnQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_GcC_I2ldEeyLZOr4w4rOnQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
