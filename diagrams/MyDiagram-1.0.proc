@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/studio/configuration" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_gtxYwGlYEeyMUe5pSZVodg" name="MyDiagram" author="Florent Sarat" bonitaVersion="7.11.4" bonitaModelVersion="7.11.1-001" configId="ACED000574001B4D794469616772616D372E31312E312D303031372E31312E347370">
     <elements xmi:type="process:Pool" xmi:id="_gtxYwWlYEeyMUe5pSZVodg" name="Pool">
       <elements xmi:type="process:Lane" xmi:id="_gtxYwmlYEeyMUe5pSZVodg" name="Employee lane" actor="_gtxY22lYEeyMUe5pSZVodg">
@@ -49,7 +49,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_gtxYzmlYEeyMUe5pSZVodg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_gtxYz2lYEeyMUe5pSZVodg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_gtxY0GlYEeyMUe5pSZVodg">
-            <targetForm xmi:type="expression:Expression" xmi:id="_gtxY0WlYEeyMUe5pSZVodg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_B6nCsG-cEeyB6uFQHUaXBg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_gtxY0mlYEeyMUe5pSZVodg"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_gtxY02lYEeyMUe5pSZVodg" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -116,7 +116,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_3Lvd0WlcEeyLZOr4w4rOnQ" content=""/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_gtxY1GlYEeyMUe5pSZVodg">
-        <targetForm xmi:type="expression:Expression" xmi:id="_gtxY1WlYEeyMUe5pSZVodg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_B6nCsW-cEeyB6uFQHUaXBg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_gtxY1mlYEeyMUe5pSZVodg">
         <targetForm xmi:type="expression:Expression" xmi:id="_gtxY12lYEeyMUe5pSZVodg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -134,6 +134,35 @@
         <condition xmi:type="expression:Expression" xmi:id="_HPdZEmldEeyLZOr4w4rOnQ" name="" content="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_gtxY22lYEeyMUe5pSZVodg" documentation="This is an example of actor that is mapped to any ACME users" name="Employee actor" initiator="true"/>
+      <configurations xmi:type="configuration:Configuration" xmi:id="__pXY0G-bEeyB6uFQHUaXBg" name="Production" version="7.11.1-001" username="walter.bates" password="bpm">
+        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="__pbDMG-bEeyB6uFQHUaXBg">
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="__pbDMW-bEeyB6uFQHUaXBg" name="Employee actor">
+            <groups xmi:type="actormapping:Groups" xmi:id="__pbDMm-bEeyB6uFQHUaXBg">
+              <group>/acme</group>
+            </groups>
+            <memberships xmi:type="actormapping:Membership" xmi:id="__pbDM2-bEeyB6uFQHUaXBg"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="__pbDNG-bEeyB6uFQHUaXBg"/>
+            <users xmi:type="actormapping:Users" xmi:id="__pbDNW-bEeyB6uFQHUaXBg"/>
+          </actorMapping>
+        </actorMappings>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="__pXY0W-bEeyB6uFQHUaXBg" type="CONNECTOR" definitionId="starwars" definitionVersion="1.0.0" implementationId="starwars-impl" implementationVersion="1.0.0"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="__pXY0m-bEeyB6uFQHUaXBg" type="CONNECTOR" definitionId="pdf2image" definitionVersion="1.0.0" implementationId="pdf2image-impl" implementationVersion="1.0.0"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="__pXY02-bEeyB6uFQHUaXBg" id="ACTOR_FILTER"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="__pXY1G-bEeyB6uFQHUaXBg" id="CONNECTOR">
+          <children xmi:type="configuration:FragmentContainer" xmi:id="__pXY1W-bEeyB6uFQHUaXBg" id="starwars-impl-1.0.0">
+            <fragments xmi:type="configuration:Fragment" xmi:id="__pXY1m-bEeyB6uFQHUaXBg" key="starwars-impl -- 1.0.0" value="starwars-impl-1.0.0.jar" type="CONNECTOR"/>
+          </children>
+          <children xmi:type="configuration:FragmentContainer" xmi:id="__pXY12-bEeyB6uFQHUaXBg" id="pdf2image-impl-1.0.0">
+            <fragments xmi:type="configuration:Fragment" xmi:id="__pXY2G-bEeyB6uFQHUaXBg" key="pdf2image-impl -- 1.0.0" value="pdfbox-2.0.22.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="__pXY2W-bEeyB6uFQHUaXBg" key="pdf2image-impl -- 1.0.0" value="fontbox-2.0.22.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="__pXY2m-bEeyB6uFQHUaXBg" key="pdf2image-impl -- 1.0.0" value="pdf2image-impl-1.0.0.jar" type="CONNECTOR"/>
+          </children>
+        </processDependencies>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="__pXY22-bEeyB6uFQHUaXBg" id="GROOVY_SCRIPT"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="__pXY3G-bEeyB6uFQHUaXBg" id="OTHER"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="__pXY3W-bEeyB6uFQHUaXBg" id="GROOVY_SCRIPT"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="__pXY3m-bEeyB6uFQHUaXBg" id="OTHER"/>
+      </configurations>
       <contract xmi:type="process:Contract" xmi:id="_gtxY3GlYEeyMUe5pSZVodg"/>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_gtxY3WlYEeyMUe5pSZVodg">
         <name xmi:type="expression:Expression" xmi:id="_gtxY3mlYEeyMUe5pSZVodg" content="" returnTypeFixed="true"/>
